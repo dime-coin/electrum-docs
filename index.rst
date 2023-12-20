@@ -1,9 +1,9 @@
-.. Electrum documentation master file, created by
-   sphinx-quickstart on Fri Sep 18 14:24:02 2015.
+.. Electrum-Dime documentation master file, created by
+   sphinx-quickstart on Wed Dec 20 14:01:02 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the Electrum Documentation!
+Welcome to the Electrum-Dime Documentation!
 ======================================
 
 Electrum-Dime is a lightweight Dimecoin wallet.
