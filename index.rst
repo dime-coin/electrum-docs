@@ -6,7 +6,7 @@
 Welcome to the Electrum Documentation!
 ======================================
 
-Electrum is a lightweight Bitcoin wallet.
+Electrum-Dime is a lightweight Dimecoin wallet.
 
 .. toctree::
    :maxdepth: 2
