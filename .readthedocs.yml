@@ -1,7 +1,7 @@
 version: 2
 
-# see https://readthedocs.org/projects/electrum/
-# and the webhook set up in https://github.com/spesmilo/electrum-docs/settings/hooks
+# see https://readthedocs.org/projects/electrum-docs/
+# and the webhook set up in https://github.com/dime-coin/electrum-docs/settings/hooks
 
 build:
   os: ubuntu-20.04

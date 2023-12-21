@@ -2,16 +2,16 @@ Command Line
 ============
 
 
-Electrum has a powerful command line. This page will show you a few basic principles.
+Electrum-Dime has a powerful command line. This page will show you a few basic principles.
 
-Note that this page has been updated for Electrum 4.0.
+Note that this page has been updated for Electrum-Dime 1.0.
 
 
 Using the inline help
 ---------------------
 
 
-To see the list of Electrum commands, type:
+To see the list of Electrum-Dime commands, type:
 
 .. code-block:: bash
 
@@ -28,7 +28,7 @@ To see the documentation for a command, type:
 How to use the daemon
 ---------------------
 
-By default, commands are sent to an Electrum daemon.
+By default, commands are sent to an Electrum-Dime daemon.
 Here is how to start and stop the daemon:
 
 .. code-block:: bash

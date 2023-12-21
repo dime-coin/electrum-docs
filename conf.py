@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Electrum documentation build configuration file, created by
-# sphinx-quickstart on Sun Sep  3 08:16:07 2017.
+# Electrum-Dime documentation build configuration file, created by
+# sphinx-quickstart on Wed Dec  20 17:23:07 2023.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -55,9 +55,9 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'Electrum'
-copyright = '2011-2023+, Thomas Voegtlin'
-author = 'Thomas Voegtlin'
+project = 'Electrum-Dime'
+copyright = '2018-2024, Dimecoin Developers'
+author = 'Edited for Dimecoin by Douglas Hopping. Originally authored by, Thomas Voegtlin'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -123,7 +123,7 @@ def setup(app):
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Electrumdoc'
+htmlhelp_basename = 'Electrum-Dimedoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -150,8 +150,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Electrum.tex', 'Electrum Documentation',
-     'Thomas Voegtlin', 'manual'),
+    (master_doc, 'Electrum-Dime.tex', 'Electrum-Dime Documentation',
+     'Douglas Hopping', 'manual'),
 ]
 
 
@@ -160,7 +160,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'electrum', 'Electrum Documentation',
+    (master_doc, 'electrum', 'Electrum-Dime Documentation',
      [author], 1)
 ]
 
@@ -171,10 +171,12 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Electrum', 'Electrum Documentation',
-     author, 'Electrum', 'One line description of project.',
+    (master_doc, 'Electrum-Dime', 'Electrum-Dime Documentation',
+     author, 'Electrum-Dime', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+# -- custom indent variable ------------------------------------------------
 
 
 

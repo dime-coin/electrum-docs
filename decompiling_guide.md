@@ -8,17 +8,17 @@ did not have formal evidence at that time.
 
 ## 0. Background
 
-Electrum is a popular Bitcoin wallet, distributed on
-[electrum.org](https://www.electrum.org) and
-[spesmilo/electrum](https://github.com/spesmilo/electrum).
+Electrum-Dime is a popular Dimecoin wallet, distributed on
+[dimecoinnetwork.com](https://www.dimecoinnetwork.com) and
+[dime-coin/electrum-dimecoin](https://github.com/dime-coin/electrum-dimecoin).
 
 Recently, a website hosted at "electrum dot com" has been trying to
-defraud Electrum users, by distributing fake Electrum binaries that
+defraud Bitcoin Electrum users, by distributing fake Electrum binaries that
 will extract the user's seed words and private keys, and send them to
-a remote server.
+a remote server. Users must be aware this is possible to happen to those using Electrum-Dime if you do not download from official sources.
 
-In the past, this kind of attack has been carried out by websites
-hosted on domain names similar to electrum.org (e.g. they swap two
+For example, in the past, this kind of attack has been carried out by websites
+hosted on domain names similar to electrum.org (original creators of the electrum client) (e.g. they swap two
 letters, or use fancy UTF8 characters that look similar), and using
 paid Google ads. Those websites are commonly just an almost exact copy
 of the official one.
@@ -154,12 +154,12 @@ bitcoin-stealing malware.
 
 ## 7. Closing
 
-Users should only download binaries from official sources, and they should check the GPG signatures
+Users should ONLY download binaries from official sources, and they should check the GPG signatures
 (official binaries are signed with
-[ThomasV's key](https://pgp.mit.edu/pks/lookup?op=vindex&search=0x2BD5824B7F9470E6)).
+[Dhop14's key](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xA3E6459E3707BC46849AC0AA964DA787DBC83054)).
 Alternatively if they know how, they can run from source, or build binaries themselves.
 
-In addition to GPG signatures, Electrum is working on having the Windows binaries signed using the
+In addition to GPG signatures, Electrum-Dime is working on having the Windows binaries signed using the
 Windows native scheme, which should be ready soon, and at some point there will be an
 official signed package in the MacOS store as well.
 

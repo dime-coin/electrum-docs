@@ -2,7 +2,7 @@ Using cold storage with the command line
 ========================================
 
 This page will show you how to sign a transaction with
-an offline Electrum wallet, using the Command line.
+an offline Electrum-Dime wallet, using the Command line.
 
 Create an unsigned transaction
 ------------------------------
@@ -27,7 +27,7 @@ You may view it using:
 Sign the transaction
 --------------------
 
-The serialization format of Electrum contains the master
+The serialization format of Electrum-Dime contains the master
 public key needed and key derivation, used by the offline
 wallet to sign the transaction.
 

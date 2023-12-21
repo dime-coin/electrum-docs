@@ -27,7 +27,7 @@ window.  Transfer that key to your online machine somehow.
 Create a watching-only version of your wallet
 ---------------------------------------------
 
-On your online machine, open up Electrum and select File ->
+On your online machine, open up Electrum-Dime and select File ->
 New/Restore. Enter a name for the wallet and select "Standard wallet".
 
 .. image:: png/standard_wallet.png

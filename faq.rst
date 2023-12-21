@@ -2,22 +2,20 @@ Frequently Asked Questions
 ==========================
 
 
-How does Electrum work?
+How does Electrum-Dime work?
 -----------------------
 
-Electrum's focus is speed, with low resource usage and
-simplifying Bitcoin. Startup times are instant because it
-operates in conjunction with high-performance servers that
-handle the most complicated parts of the Bitcoin system.
+Electrum-Dime's focus is to make using Dimecoin more user-friendly with a focus on speed and with low resource usage. 
+Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Dimecoin system.
 
-Does Electrum trust servers?
+Does Electrum-Dime trust servers?
 ----------------------------
 
-In short, not really. The Electrum client never sends private keys
+In short, not really. The Electrum-Dime client never sends private keys
 to the servers. In addition, it verifies the information
 reported by servers, using a technique called :ref:`Simple Payment Verification <spv>`
 
-By default, Electrum tries to maintain connections to ~10 servers.
+By default, Electrum-Dime tries to maintain connections to ~10 servers.
 The client subscribes to block header notifications to all of these,
 and also periodically polls each for dynamic fee estimates.
 For all connected servers except one, that is all they are used for.
@@ -60,7 +58,7 @@ in a way that minimises trust in the server.
 
 Anyone can run a server. If you feel strongly about privacy,
 or if SPV-security guarantees are not enough for you, you should
-consider running your own Electrum server.
+consider running your own Electrum-Dime server.
 
 
 What is the seed?
@@ -81,8 +79,8 @@ the "I already have a seed" option in the wizard.
 How secure is the seed?
 -----------------------
 
-The seed phrase created by Electrum has 132 bits of entropy. This
-means that it provides the same level of security as a Bitcoin private
+The seed phrase created by Electrum-Dime has 132 bits of entropy. This
+means that it provides the same level of security as a Dimecoin private
 key (of length 256 bits). Indeed, an elliptic curve key of length n
 provides n/2 bits of security.
 
@@ -101,9 +99,9 @@ the type, choose "I already have a seed" and proceed to input your seed
 phrase.
 
 
-How does Electrum get the Bitcoin price it uses?
+How does Electrum-Dime get the Dimecoin price it uses?
 ------------------------------------------------
-Electrum gets the Bitcoin price from a third party, but provides
+Electrum-Dime gets the Dimecoin price from a third party, but provides
 various options.  Please see menubar > `Tools` > `Preferences` > `Fiat`
 to view the current setting or choose a new one.
 
@@ -111,14 +109,14 @@ to view the current setting or choose a new one.
 My transaction has been unconfirmed for a long time. What can I do?
 -------------------------------------------------------------------
 
-Bitcoin transactions become "confirmed" when miners accept to write
-them in the Bitcoin blockchain. In general, the speed of confirmation
+Dimecoin transactions become "confirmed" when miners or stakers accept to write
+them into the Dimecoin blockchain. In general, the speed of confirmation
 depends on the fee you attach to your transaction; miners prioritize
 transactions that pay the highest fees.
 
-Recent versions of Electrum use "dynamic fees" in order to make sure
+Electrum-Dime uses "dynamic fees" in order to make sure
 that the fee you pay with your transaction is adequate. This feature
-is enabled by default in recent versions of Electrum.
+is enabled by default in recent versions of Electrum-Dime.
 
 If you have made a transaction that is unconfirmed, you can:
 
@@ -149,18 +147,18 @@ If you have made a transaction that is unconfirmed, you can:
    and then "Broadcast".
 
 
-What does it mean to "freeze" an address in Electrum?
+What does it mean to "freeze" an address in Electrum-Dime?
 -----------------------------------------------------
 
 When you freeze an address, the funds in that address will not be used
-for sending bitcoins. You cannot send bitcoins if you don't have
+for sending dimecoins. You cannot send dimecoins if you don't have
 enough funds in the non-frozen addresses.
 
 
 How is the wallet encrypted?
 ----------------------------
 
-Electrum uses two separate levels of encryption:
+Electrum-Dime uses two separate levels of encryption:
 
  - Your seed and private keys are encrypted using AES-256-CBC. The
    private keys are decrypted only briefly, when you need to sign a
@@ -172,25 +170,25 @@ Electrum uses two separate levels of encryption:
    the wallet information will remain unencrypted in the memory of
    your computer for the duration of your session. If a wallet is
    encrypted, then its password will be required in order to open
-   it. Note that the password will not be kept in memory; Electrum
+   it. Note that the password will not be kept in memory; Electrum-Dime
    does not need it in order to save the wallet on disk, because it
    uses asymmetric encryption (ECIES).
 
-Wallet file encryption is activated by default since version 2.8. It
+Wallet file encryption is activated by default. It
 is intended to protect your privacy, but also to prevent you from
-requesting bitcoins on a wallet that you do not control.
+requesting dimecoins on a wallet that you do not control.
 
 
-Does Electrum support cold wallets?
+Does Electrum-Dime support cold wallets?
 -----------------------------------
 
 Yes, see :ref:`Cold Storage <coldstorage>`.
 
 
-Can I import private keys from other Bitcoin clients?
+Can I import private keys from other Dimecoin clients?
 -----------------------------------------------------
 
-In Electrum 2.0, you cannot import private keys in a wallet that has a
+In Electrum-Dime 1.0, you cannot import private keys in a wallet that has a
 seed. You should sweep them instead.
 
 If you want to import private keys and not sweep them, you need to
@@ -206,13 +204,13 @@ watching-only wallet.
 You will need to back up this wallet, because it cannot be
 recovered from a seed.
 
-Can I sweep private keys from other Bitcoin clients?
+Can I sweep private keys from other Dimecoin clients?
 ----------------------------------------------------
 
 
-Sweeping private keys means to send all the bitcoins they control to
+Sweeping private keys means to send all the dimecoins they control to
 an existing address in your wallet. The private keys you sweep do not
-become a part of your wallet.  Instead, all the bitcoins they control
+become a part of your wallet.  Instead, all the dimecoins they control
 are sent to an address that has been deterministically generated from
 your wallet seed.
 
@@ -226,16 +224,16 @@ on "Send" to send the coins to your wallet.
 
 .. _datadir:
 
-Where is the Electrum datadir located?
+Where is the Electrum-Dime datadir located?
 --------------------------------------
 
-The data directory of Electrum is where wallet files, config settings,
+The data directory of Electrum-Dime is where wallet files, config settings,
 logs, blockchain headers, etc are stored.
 
 On Windows:
 
 - Show hidden files
-- Go to \\Users\\YourUserName\\AppData\\Roaming\\Electrum (or %APPDATA%\\Electrum)
+- Go to \\Users\\YourUserName\\AppData\\Roaming\\Electrum-Dime (or %APPDATA%\\Electrum-Dime)
 
 On Mac:
 
@@ -263,7 +261,7 @@ How to enable debug logging?
 
    On Linux/Windows/macOS, you can enable logging to disk.
    Using the (Qt) GUI, go to menubar>Tools>Preferences>Misc,
-   and tick "Write logs to file". After restarting Electrum,
+   and tick "Write logs to file". After restarting Electrum-Dime,
    debug logs will be written to the :code:`logs/` folder inside the
    :ref:`datadir <datadir>`.
 
@@ -279,7 +277,7 @@ How to enable debug logging?
 
 2. Logging to terminal (standard error)
 
-   On Linux/macOS, if you start Electrum from terminal, you can specify
+   On Linux/macOS, if you start Electrum-Dime from terminal, you can specify
    the :code:`-v` flag, to enable debug logs in the terminal (to stderr).
    This option does not work on Windows (when using the binaries).
 
@@ -287,10 +285,10 @@ How to enable debug logging?
 
    .. code-block:: none
 
-       $ /Applications/Electrum.app/Contents/MacOS/run_electrum -v
+       $ /Applications/Electrum-Dime.app/Contents/MacOS/run_electrum -v
 
 
-Can I do bulk payments with Electrum? (batching)
+Can I do bulk payments with Electrum-Dime? (batching)
 ------------------------------------------------
 
 You can create a transaction with several outputs. In the GUI, type
@@ -305,24 +303,24 @@ You can also import a CSV file in the "Pay to" field, by clicking on
 the folder icon.
 
 
-Can Electrum create and sign raw transactions?
+Can Electrum-Dime create and sign raw transactions?
 ----------------------------------------------
 
-Electrum lets you create and sign raw transactions right from the user
+Electrum-Dime lets you create and sign raw transactions right from the user
 interface using a form.
 
-Electrum freezes when I try to send bitcoins.
+Electrum-Dime freezes when I try to send dimecoins.
 --------------------------------------------
 
 This might happen if you are trying to spend a large number of
 transaction outputs (for example, if you have collected hundreds of
-donations from a Bitcoin faucet). When you send Bitcoins, Electrum
+donations from a dimecoin faucet). When you send dimecoins, Electrum-Dime
 looks for unspent coins that are in your wallet in order to create a
 new transaction. Unspent coins can have different values, much like
 physical coins and bills.
 
 If this happens, you should consolidate your transaction inputs by
-sending smaller amounts of bitcoins to one of your wallet addresses;
+sending smaller amounts of dimecoins to one of your wallet addresses;
 this would be the equivalent of exchanging a stack of nickels for a
 dollar bill.
 
@@ -332,8 +330,8 @@ What is the gap limit?
 ----------------------
 
 The gap limit is the maximum number of consecutive unused addresses in
-your deterministic sequence of addresses. Electrum uses it in order
-to stop looking for addresses. In Electrum 2.0, it is set to 20 by
+your deterministic sequence of addresses. Electrum-Dime uses it in order
+to stop looking for addresses. In Electrum-Dime 1.0, it is set to 20 by
 default, so the client will get all addresses until 20 unused
 addresses are found.
 
@@ -341,7 +339,7 @@ addresses are found.
 How can I pre-generate new addresses?
 -------------------------------------
 
-Electrum will generate new addresses as you use them,
+Electrum-Dime will generate new addresses as you use them,
 until it hits the `gap limit`_.
 
 If you need to pre-generate more addresses, you can do so by typing
@@ -365,67 +363,66 @@ do this:
    [wallet.create_new_address(False) for i in range(50)]
 
 
-How do I upgrade Electrum?
+How do I upgrade Electrum-Dime?
 --------------------------
 
 Warning: always save your wallet seed on paper before
 doing an upgrade.
 
-To upgrade Electrum, just install the most recent version.
+To upgrade Electrum-Dime, just install the most recent version.
 The way to do this will depend on your OS.
 
 Note that your wallet files are stored separately from the
 software, so you can safely remove the old version of the
 software if your OS does not do it for you.
 
-Some Electrum upgrades will modify the format of your
+Some Electrum-Dime upgrades will modify the format of your
 wallet files.
 
 For this reason, it is not recommended to downgrade
-Electrum to an older version once you have opened your
+Electrum-Dime to an older version once you have opened your
 wallet file with the new version. The older version will
 not always be able to read the new wallet file.
 
-
-The following issues should be considered when upgrading
-Electrum 1.x wallets to Electrum 2.x:
-
-- Electrum 2.x will need to regenerate all of your
+.. 
+  The following issues should be considered when upgrading
+  Electrum-Dime 1.x wallets to Electrum 2.x:
+..
+  - Electrum 2.x will need to regenerate all of your
   addresses during the upgrade process. Please allow it
   time to complete, and expect it to take a little longer
-  than usual for Electrum to be ready.
-
-- The contents of your wallet file will be replaced with
+  than usual for Electrum to be ready
+..
+  - The contents of your wallet file will be replaced with
   an Electrum 2 wallet. This means Electrum 1.x will no
   longer be able to use your wallet once the upgrade is
   complete.
 
-- The "Addresses" tab will not show any addresses the
-  first time you launch Electrum 2. This is expected
-  behavior. Restart Electrum 2 after the upgrade is
+- Note: The "Addresses" tab will not show any addresses the
+  first time you launch Electrum-Dime after an upgrade. This is expected
+  behavior. Restart Electrum-Dime after the upgrade is
   complete and your addresses will be available.
 
-- Offline copies of Electrum will not show the
+- Offline copies of Electrum-Dime will not show the
   addresses at all because it cannot synchronize with
   the network. You can force an offline generation of a
   few addresses by typing the following into the
   Console: wallet.synchronize(). When it's complete,
-  restart Electrum and your addresses will once again
+  restart Electrum-Dime and your addresses will once again
   be available.
-
 
 .. _antivirus:
 
-My anti-virus has flagged Electrum as malware! What now?
+My anti-virus has flagged Electrum-Dime as malware! What now?
 --------------------------------------------------------
 
-Electrum binaries are often flagged by various anti-virus software.
+Electrum-Dime binaries are often flagged by various anti-virus software.
 There is nothing we can do about it, so please stop reporting that to us.
 Anti-virus software uses heuristics in order to determine if a program
 is malware, and that often results in false positives.
 
 If you trust the developers of the project, you can verify
-the GPG signature of Electrum binaries, and safely ignore any anti-virus
+the GPG signature of Electrum-Dime binaries, and safely ignore any anti-virus
 warnings.
 
 If you do not trust the developers of the project, you should build the
@@ -435,7 +432,7 @@ Finally, if you are really concerned about malware, you should not use an
 operating system that relies on anti-virus software.
 
 
-Electrum requires recent Python. My Linux distribution does not yet have it. What now?
+Electrum-Dime requires recent Python. My Linux distribution does not yet have it. What now?
 --------------------------------------------------------------------------------------
 
 There are several ways to resolve this.
@@ -474,8 +471,8 @@ There are several ways to resolve this.
 I might run my own server. Are client-server connections authenticated?
 -----------------------------------------------------------------------
 
-Electrum uses a client-server architecture, where the endpoints speak the
-Electrum protocol. The Electrum protocol is JSON-RPC based.
+Electrum-Dime uses a client-server architecture, where the endpoints speak the
+Electrum-Dime protocol. The Electrum-Dime protocol is JSON-RPC based.
 The two main stacks the client supports are
 
 1. JSON-RPC over SSL/TLS over TCP
@@ -485,8 +482,6 @@ The two main stacks the client supports are
 Note that neither option uses HTTP.
 
 The client only connects to servers over SSL (so plaintext TCP is not used).
-Prior to Electrum 3.1, there used to be a checkbox in the GUI to toggle this
-but it was removed.
 
 As for authentication, the client accepts both CA-signed certificates and self-signed
 SSL certificates. When it first connects to a server, it pins the fact whether that
@@ -504,14 +499,14 @@ For your own server, both CA-signed and self-signed certs have their advantages.
 - With CA-signed certs, you need to trust the Certificate Authorities.
 
 
-Does Electrum support altcoins ("cryptocurrencies")?
+Does Electrum-Dime support Altcoins ("Cryptocurrencies")?
 ----------------------------------------------------
 
-No. Electrum only supports Bitcoin.
+No. Electrum-Dime currently only supports Dimecoin.
 
-The project has never supported any altcoins, only Bitcoin. However Electrum
+This project has never intended to support additional altcoins, only Dimecoin. However Electrum
 is free (as in freedom) software with a permissive license, and there are many
 forks of the software that support specific altcoins. These are separate projects,
-with their own maintainers, independent of Electrum. We do not review their code
+with their own maintainers, independent of Electrum-Dime. We do not review their code
 or endorse them in any way. If you are a user of these, please direct any and all
 support requests to their maintainers, instead of us.

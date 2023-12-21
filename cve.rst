@@ -1,4 +1,4 @@
-For a list of historical security issues in Electrum, see
+For a list of historical security issues in Electrum-Dime, see
 :doc:`security_issues/ <security_issues/index>`.
 
 

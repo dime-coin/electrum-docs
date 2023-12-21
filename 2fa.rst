@@ -1,7 +1,7 @@
 Two Factor Authentication
 =========================
 
-Electrum offers two-factor authenticated wallets, with a remote server
+Electrum-Dime offers two-factor authenticated wallets, with a remote server
 acting to co-sign transactions, adding another level of security in
 the event of your computer being compromised.
 
@@ -10,7 +10,7 @@ Here is a guide_ on how it works.
 
 .. _guide: https://api.trustedcoin.com/#/electrum-help
 
-Creating a Wallet
+Creating A Wallet
 -----------------
 
 .. image:: png/Create_2fa.png
@@ -19,7 +19,7 @@ Creating a Wallet
 .. image:: png/TrustedCoin.png
 
 
-Restoring from seed
+Restoring From Seed
 -------------------
 
 Even if TrustedCoin is compromised or taken offline, your coins are
@@ -28,7 +28,7 @@ contains two master private keys in a 2-of-3 security scheme. In
 addition, the third master public key can be derived from your seed,
 ensuring that your wallet addresses can be restored. In order to
 restore your wallet from seed, select "wallet with two factor
-authentication", as this tells Electrum to use this special variety of
+authentication", as this tells Electrum-Dime to use this special variety of
 seed for restoring your wallet.
 
 .. image:: png/Restore_2fa.png
