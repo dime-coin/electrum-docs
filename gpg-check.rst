@@ -1,29 +1,29 @@
-Verifying GPG signature of Electrum using Linux command line
+Verifying GPG Signature of Electrum-Dime Using Linux Command Line
 ============================================================
 
-This can be used to verify the authenticity of Electrum binaries/sources.
+This can be used to verify the authenticity of Electrum-Dime binaries/sources.
 
-Download only from electrum.org and remember to check the gpg signature again every time you download a new version
+Download only from dimecoinnetwork.com and remember to check the gpg signature again every time you download a new version
 
-Obtain public GPG key for ThomasV
+Obtain Public GPG Key for Douglas Hopping (Dhop14)
 ---------------------------------
 
 In a terminal enter (or copy):
 
 .. code-block:: bash
 
-   gpg --keyserver keys.gnupg.net --recv-keys 6694D8DE7BE8EE5631BED9502BD5824B7F9470E6 
+   gpg --keyserver hkp://pgp.mit.edu:80 --recv-keys "A3E6459E3707BC46849AC0AA964DA787DBC83054" 
    
-You should be able to substitute any public GPG keyserver if keys.gnupg.net is (temporarily) not working
+You should be able to substitute any public GPG keyserver if pgp.mit.edu is (temporarily) not working
 
-Download Electrum and signature file (asc)
+Download Electrum-Dime and Signature File (asc)
 ------------------------------------------
 
-Download the Python Electrum-<version>.tar.gz or AppImage file 
+Download the Python Electrum-Dime-<version>.tar.gz or AppImage File 
 
 Right click on the signature file and save it as well
 
-Verify GPG signature
+Verify GPG Signature
 --------------------
 
 Run the following command from the same directory you saved the files replacing <electrum file> with the one actually downloaded:
@@ -36,13 +36,13 @@ The message should say:
 
 .. code-block:: bash
 
-  Good signature from "Thomas Voegtlin (https://electrum.org) <thomasv@electrum.org>
+  Good signature from "DHop14" <douglas@dimecoinnetwork.com>
 
 and 
 
 .. code-block:: bash
 
-  Primary key fingerprint: 6694 D8DE 7BE8 EE56 31BE  D950 2BD5 824B 7F94 70E6
+  Primary key fingerprint: A3E6 459E 3707 BC46 849A C0AA 964D A787 DBC8 3054
 
 You can ignore this:
 
