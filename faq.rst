@@ -383,10 +383,9 @@ For this reason, it is not recommended to downgrade
 Electrum-Dime to an older version once you have opened your
 wallet file with the new version. The older version will
 not always be able to read the new wallet file.
-
-.. 
-  The following issues should be considered when upgrading
-  Electrum-Dime 1.x wallets to Electrum 2.x:
+ 
+The following are known issues that should be considered when upgrading
+Electrum-Dime:
 ..
   - Electrum 2.x will need to regenerate all of your
   addresses during the upgrade process. Please allow it
@@ -398,7 +397,7 @@ not always be able to read the new wallet file.
   longer be able to use your wallet once the upgrade is
   complete.
 
-- Note: The "Addresses" tab will not show any addresses the
+- The "Addresses" tab will not show any addresses the
   first time you launch Electrum-Dime after an upgrade. This is expected
   behavior. Restart Electrum-Dime after the upgrade is
   complete and your addresses will be available.
@@ -499,7 +498,7 @@ For your own server, both CA-signed and self-signed certs have their advantages.
 - With CA-signed certs, you need to trust the Certificate Authorities.
 
 
-Does Electrum-Dime support Altcoins ("Cryptocurrencies")?
+Does Electrum-Dime support altcoins ("cryptocurrencies")?
 ----------------------------------------------------
 
 No. Electrum-Dime currently only supports Dimecoin.
