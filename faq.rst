@@ -386,6 +386,7 @@ not always be able to read the new wallet file.
  
 The following are known issues that should be considered when upgrading
 Electrum-Dime:
+
 ..
   - Electrum 2.x will need to regenerate all of your
   addresses during the upgrade process. Please allow it
