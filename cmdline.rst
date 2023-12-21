@@ -25,7 +25,7 @@ To see the documentation for a command, type:
    electrum help <command>
 
 
-How to use the daemon
+How to Use the Daemon
 ---------------------
 
 By default, commands are sent to an Electrum-Dime daemon.
@@ -66,7 +66,7 @@ This is done with the --offline flag:
 
 
 
-Magic words
+Magic Words
 -----------
 
 
@@ -122,7 +122,7 @@ commands.
    electrum payto ecdsa.net !
 
 
-Formatting outputs using jq
+Formatting Outputs Using 'jq'
 ---------------------------
 
 Command outputs are either simple strings or json structured data. A
@@ -137,7 +137,7 @@ The following examples use it.
 Examples
 --------
 
-Sign and verify message
+Sign and Verify Message
 ```````````````````````
 
 We may use a variable to store the signature, and verify
@@ -154,7 +154,7 @@ And:
    cat LICENCE | electrum verifymessage 1JuiT4dM65d8vBt8qUYamnDmAMJ4MjjxRE $sig -
 
 
-Show the values of your unspents
+Show Values Unspents
 ````````````````````````````````
 
 The 'listunspent' command returns a list of dict objects,
@@ -167,7 +167,7 @@ command:
    electrum listunspent | jq 'map(.value)'
           
 
-Select only incoming transactions from history
+Select Only Incoming Transactions from History
 ``````````````````````````````````````````````
 
 Incoming transactions have a positive 'value' field
@@ -176,7 +176,7 @@ Incoming transactions have a positive 'value' field
 
    electrum history | jq '.[] | select(.value>0)'
 
-Filter transactions by date
+Filter Transactions by Date
 ```````````````````````````
 
 The following command selects transactions that were
@@ -201,7 +201,7 @@ period:
    electrum history | jq --arg before $before --arg after $after '.[] | select(.timestamp&gt;($after|tonumber) and .timestamp&lt;($before|tonumber))'
           
 
-Encrypt and decrypt messages
+Encrypt and Decrypt Messages
 ````````````````````````````
 
 First we need the public key of a wallet address:
@@ -226,7 +226,7 @@ Decrypt:
 Note: this command will prompt for the encrypted message, then for the
 wallet password
 
-Export private keys and sweep coins
+Export Private Keys and Sweep Coins
 ```````````````````````````````````
 
 The following command will export the private keys of all wallet

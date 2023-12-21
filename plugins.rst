@@ -1,7 +1,7 @@
 Plugins
 =======
 
-The plugin system of Electrum is designed to allow the development of new features without increasing the core code of Electrum. To enable or disable Plugins, see menubar > `Tools` > `Plugins`. 
+The plugin system of Electrum-Dime is designed to allow the development of new features without increasing the core code of Electrum-Dime. To enable or disable Plugins, see menubar > `Tools` > `Plugins`. 
 
 Below you can find a short description of each available tool. 
 
@@ -29,7 +29,7 @@ keys.
 LabelSync
 ---------
 
-Save your wallet labels on a remote server, and synchronize them across multiple devices where you use Electrum. Labels, transactions IDs and addresses are encrypted before they are sent to the remote server.
+Save your wallet labels on a remote server, and synchronize them across multiple devices where you use Electrum-Dime. Labels, transactions IDs and addresses are encrypted before they are sent to the remote server.
 
 
 Revealer

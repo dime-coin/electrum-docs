@@ -1,8 +1,8 @@
-Hardware wallets on Linux
+Hardware Wallets on Linux
 =========================
 
 The following aims to be a concise guide of what you need to get your
-hardware wallet working with Electrum.
+hardware wallet working with Electrum-Dime.
 
 If you use the AppImage, that already has all the dependencies and Python
 libraries bundled with it, so skip the first two steps.
@@ -25,13 +25,13 @@ that, you need:
 
 (Package names may be different for other distributions.)
 
-2. Python libraries
+2. Python Libraries
 ~~~~~~~~~~~~~~~~~~~
 
 Then, depending on the device you have, you need a python package
 (typically a library by the manufacturer).
 For a usually more up-to-date list (including potential version requirements), refer to
-`requirements-hw.txt <https://github.com/spesmilo/electrum/blob/master/contrib/requirements/requirements-hw.txt>`_
+`requirements-hw.txt <https://github.com/dime-coin/electrum-dimecoin/blob/master/contrib/requirements/requirements-hw.txt>`_
 in the client source.
 
 
@@ -127,5 +127,5 @@ See `electrum/contrib/udev <https://github.com/spesmilo/electrum/tree/master/con
 4. Done
 ~~~~~~~
 
-That's it! Electrum should now detect your device.
+That's it! Electrum-Dime should now detect your device.
 

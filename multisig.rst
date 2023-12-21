@@ -18,7 +18,7 @@ set of Addresses.
   or malware to steal your coins.
 
 
-Create a pair of 2-of-2 wallets
+Create a Pair of 2-of-2 Wallets
 -------------------------------
 
 Each cosigner needs to do this: In the menu select File->New, then
@@ -70,7 +70,7 @@ For this you have multiple options:
 - you can use a remote server, with the CosignerPool plugin.
 
 
-Transfer a file
+Transfer a File
 ```````````````
 
 You can save the partially signed transaction to a file (using the

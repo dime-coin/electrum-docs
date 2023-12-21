@@ -1,9 +1,9 @@
-How to accept Bitcoin on a website using Electrum
+How to Accept Dimecoin on a Website using Electrum-Dime
 =================================================
 
-This tutorial will show you how to accept Bitcoin on a website with
+This tutorial will show you how to accept Dimecoin on a website with
 SSL signed payment requests, according to BIP-70_. The docs are
-updated for Electrum 4.0 (currently in development_).
+updated for Electrum-Dime 1.0 (currently in development_).
 
 .. _BIP-70:
     https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki
@@ -14,13 +14,13 @@ development version.  Do not forget the submodule update command.
 
 
 .. _development:
-    https://github.com/spesmilo/electrum#development-version-git-clone
+    https://github.com/dimecoin-coin/electrum-dimecoin
 
 .. _Letsencrypt:
     https://letsencrypt.org/
 
 
-Add your SSL certificate to Electrum
+Add your SSL Certificate to Electrum-Dime
 ------------------------------------
 
 .. code-block:: bash
@@ -28,10 +28,10 @@ Add your SSL certificate to Electrum
    electrum -o setconfig ssl_keyfile /path/to/ssl/privkey.pem
    electrum -o setconfig ssl_certfile /path/to/ssl/fullchain.pem
 
-For details see `How to add SSL <ssl.html>`_
+For details see `How to Add SSL <ssl.html>`_
 
 
-Create and use your merchant wallet
+Create and Use your Merchant Wallet
 -----------------------------------
 
 Create a wallet on your protected machine, as you want to keep your
@@ -70,10 +70,10 @@ Configure your full hostname and port:
    electrum -o setconfig payserver_address ecdsa.org:80
 
 
-Start the Electrum daemon
+Start the Electrum-Dime Daemon
 -------------------------
 
-Once your read-only wallet is (re-)created, start Electrum as a daemon:
+Once your read-only wallet is (re-)created, start Electrum-Dime as a daemon:
 
 .. code-block:: bash
 
@@ -88,14 +88,14 @@ Note: to stop the daemon
    electrum stop
 
 
-Create a signed payment request
+Create a Signed Payment Request
 -------------------------------
 
 .. code-block:: bash
 
    electrum add_request 0.5 -m "test"
    {
-    "URI": "bitcoin:bc1qyr5xx5jkue3k72sldm5xa0taqs3n2achupymz8?amount=0.5&message=test&time=1589115653&exp=3600",
+    "URI": "dimecoin:bc1qyr5xx5jkue3k72sldm5xa0taqs3n2achupymz8?amount=0.5&message=test&time=1589115653&exp=3600",
     "address": "bc1qyr5xx5jkue3k72sldm5xa0taqs3n2achupymz8",
     "amount": 50000000,
     "amount_BTC": "0.5",
@@ -126,7 +126,7 @@ Let us open view_url in a web browser.
 .. image:: png/payrequest.png
 
 The page shows the payment request. You can open the
-bitcoin: URI with a wallet, or scan the QR code. The bottom
+dimecoin: URI with a wallet, or scan the QR code. The bottom
 line displays the time remaining until the request expires.
 
 .. image:: png/payreq_window.png
@@ -134,41 +134,41 @@ line displays the time remaining until the request expires.
 
 The page will update itself when the payment is received, using websockets.
 
+..
+   Lightning payments
+   ------------------
 
-Lightning payments
-------------------
+   To use lightning, you need to initialize lightning keys in your wallet.
+   You will need to restart the daemon after that, or to stop it before:
 
-To use lightning, you need to initialize lightning keys in your wallet.
-You will need to restart the daemon after that, or to stop it before:
+   .. code-block:: bash
 
-.. code-block:: bash
+      electrum stop
+      electrum -o init_lightning
+      electrum daemon -d
 
-   electrum stop
-   electrum -o init_lightning
-   electrum daemon -d
+   Note that it is possible to add lightning keys to a watching-only
+   wallet.  That wallet will not be able to spend coins onchain, but it
+   will be able to perform lightning transactions.
 
-Note that it is possible to add lightning keys to a watching-only
-wallet.  That wallet will not be able to spend coins onchain, but it
-will be able to perform lightning transactions.
+   The next thing you will need to do is open a channel:
 
-The next thing you will need to do is open a channel:
-
-.. code-block:: bash
+   .. code-block:: bash
 
    electrum open_channel <node_id> <amount>
 
-Wait until it is ready to be used:
+   Wait until it is ready to be used:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   electrum list_channels
+      electrum list_channels
 
-You will not immediately be able to receive with that channel, because
-it does not have inbound capacity. If you need to be able to receive
-immediately, you may do a submarine swap of your channel funds.
+   You will not immediately be able to receive with that channel, because
+   it does not have inbound capacity. If you need to be able to receive
+   immediately, you may do a submarine swap of your channel funds.
 
-To create a lightning payment request:
+   To create a lightning payment request:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   electrum add_lightning_request 0.0001 -m "test"
+      electrum add_lightning_request 0.0001 -m "test"

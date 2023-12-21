@@ -1,6 +1,10 @@
 # Decompiling the ElectrumPro stealware
 
-This document describes how to decompile the "Electrum Pro" Windows
+The document aims to inform users about the risks associated with "fake binaries," 
+specifically in the context of Dimecoin.  By providing an example of how Bitcoin's Electrum binaries were targeted, 
+it highlights a potential threat that could similarly affect Dimecoin.
+
+The steps below will illustrate how to decompile the "Electrum Pro" Windows
 binaries, and how to verify that they indeed contain bitcoin-stealing
 malware.  We previously warned users against "Electrum Pro", but we
 did not have formal evidence at that time.
@@ -63,7 +67,7 @@ will be used:
     ```
 
 
-## 2. Download the malware
+## 2. Download the Malware
 
 ```
 $ wget https://www.electrum.com/4.0.2/ElectrumPro-4.0.2-Standalone.zip
@@ -86,7 +90,7 @@ $ wget https://web.archive.org/web/20180508092547/https://www.electrum.com/4.0.2
 ```
 
 
-## 3. Uncompress the zip
+## 3. Uncompress Zip File
 
 For example
 ```
@@ -97,12 +101,12 @@ $ 7za e ElectrumPro-4.0.2-Standalone.zip
 Warning: obviously, do not execute the extracted file.
 
 
-## 4. Unpack the pyinstaller binary
+## 4. Unpack the PyInstaller Binary
 ```
 $ python3.5 ./pyinstxtractor.py electrumpro-4.0.2.exe
 ```
 
-## 5. Decompile the python bytecode
+## 5. Decompile the Python Bytecode
 ```
 $ cd electrumpro-4.0.2.exe_extracted/out00-PYZ.pyz_extracted/
 $ uncompyle6 electrum.keystore.pyc
@@ -112,7 +116,7 @@ The output of this command can be found
 [here](https://gist.github.com/SomberNight/62d78d206001e13e30e169ef8eb2b4dc).
 
 
-## 6. A look at the output
+## 6. Review the Output
 
 Particularly of interest are lines 223-248:
 
@@ -154,20 +158,19 @@ bitcoin-stealing malware.
 
 ## 7. Closing
 
-Users should ONLY download binaries from official sources, and they should check the GPG signatures
+Users should **ONLY** download binaries from *official* sources, and they should check the GPG signatures
 (official binaries are signed with
 [Dhop14's key](https://pgp.mit.edu/pks/lookup?op=vindex&search=0xA3E6459E3707BC46849AC0AA964DA787DBC83054)).
 Alternatively if they know how, they can run from source, or build binaries themselves.
 
-In addition to GPG signatures, Electrum-Dime is working on having the Windows binaries signed using the
-Windows native scheme, which should be ready soon, and at some point there will be an
-official signed package in the MacOS store as well.
+In addition to GPG signatures, Dimecoin Developers are working to have the Electrum-Dime Windows binaries signed using the 
+Windows native scheme. The goal also includes, at some point, to have an official signed package in the MacOS store as well.
 
 ### Misc
 
 Note that this post was looking at only one of the Windows binaries
-distributed by "electrum dot com", but it is safe to assume that the
-other Windows binaries are malicious as well.  We also checked the Mac
+distributed by "electrum dot com", but it is safe to assume that
+other Windows binaries, from non-trusted sources, are malicious as well.  We also checked the Mac
 `.dmg` file, and it contained the same modifications. The Linux
 package seemed harmless, presumably because the scammers did not want
 to have these changes in plain sight (Linux packages are essentially

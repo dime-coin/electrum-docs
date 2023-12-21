@@ -1,7 +1,7 @@
-How to configure SSL with Electrum
+How to Configure SSL with Electrum-Dime
 ==================================
 
-This page was written for Electrum 4.0 (currently in development_)
+This page was written for Electrum 1.0 (currently in development_)
 
 You should have a TLS/SSL private key and a public certificate for
 your domain set up already (signed by a CA, for example free Letsencrypt_)
@@ -11,9 +11,9 @@ your domain set up already (signed by a CA, for example free Letsencrypt_)
     https://letsencrypt.org/
 
 .. _development:
-    https://github.com/spesmilo/electrum#development-version-git-clone
+    https://github.com/dime-coin/electrum-dimecoin
 
-Add your SSL private key
+Add your SSL Private Key
 ------------------------
 
 Create a file that contains only the private key:
@@ -34,7 +34,7 @@ Set the path to your the SSL private key file with setconfig:
    electrum -o setconfig ssl_keyfile /path/to/ssl/privkey.pem
 
 
-Add your SSL certificate bundle
+Add your SSL Certificate Bundle
 -------------------------------
 
 Create another file, file that contains your certificate,
@@ -60,7 +60,7 @@ Set the ssl_chain path with setconfig:
 
    electrum -o setconfig ssl_certfile /path/to/ssl/fullchain.pem
 
-Check that your certificate was accepted by Electrum
+Check Certificate for Acceptance by Electrum-Dime
 ----------------------------------------------------
 
 Check that your SSL certificate correctly configured:

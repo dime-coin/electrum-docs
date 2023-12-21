@@ -1,8 +1,8 @@
-JSONRPC interface
+JSONRPC Interface
 =================
 
 
-Commands to the Electrum daemon can be sent using JSONRPC. This is
+Commands to the Electrum-Dime daemon can be sent using JSONRPC. This is
 useful if you want to use electrum in a PHP script.
 
 Note that the daemon uses a random port number by default. In order to
@@ -13,13 +13,13 @@ variable (and to restart the daemon):
 
    electrum setconfig rpcport 7777
 
-Further, starting with Electrum 3.0.5, the JSON-RPC interface is
+Further, starting with Electrum-Dime 1.0.0, the JSON-RPC interface is
 authenticated using `HTTP basic auth`_.
 
 .. _`HTTP basic auth`: https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication#Basic_authentication_scheme
 
 The username and the password are config variables.
-When first started, Electrum will initialise both;
+When first started, Electrum-Dime will initialise both;
 the password will be set to a random string. You can of course
 change them afterwards (the same way as the port, and then restart
 the daemon). To simply look up their value:

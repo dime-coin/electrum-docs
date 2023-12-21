@@ -10,7 +10,7 @@ Electrum-Dime is a lightweight Dimecoin wallet.
 
 .. toctree::
    :maxdepth: 2
-   :caption: GUI and beginners
+   :caption: GUI and Beginners
 
    faq
    invoices
@@ -25,7 +25,7 @@ Electrum-Dime is a lightweight Dimecoin wallet.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Advanced users
+   :caption: Advanced Users
 
    coldstorage_cmdline
    hardfork
@@ -46,7 +46,7 @@ Electrum-Dime is a lightweight Dimecoin wallet.
 
 .. toctree::
    :maxdepth: 2
-   :caption: For developers
+   :caption: For Developers
 
    console
    spv

@@ -1,10 +1,10 @@
-Using cold storage with the command line
+Using Cold Storage with the Command Line
 ========================================
 
 This page will show you how to sign a transaction with
 an offline Electrum-Dime wallet, using the Command line.
 
-Create an unsigned transaction
+Create an Unsigned Transaction
 ------------------------------
 
 With your online (watching-only) wallet, create an
@@ -24,7 +24,7 @@ You may view it using:
 
    cat unsigned.txn | electrum deserialize -
 
-Sign the transaction
+Sign the Transaction
 --------------------
 
 The serialization format of Electrum-Dime contains the master
@@ -41,10 +41,10 @@ the offline wallet:
 The command will ask for your password, and save the
 signed transaction in 'signed.txn'
 
-Broadcast the transaction
+Broadcast the Transaction
 -------------------------
 
-Send your transaction to the Bitcoin network, using broadcast:
+Send your transaction to the Dimecoin network, using broadcast:
 
 .. code-block:: bash
 

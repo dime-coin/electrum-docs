@@ -504,7 +504,7 @@ Does Electrum-Dime support altcoins ("cryptocurrencies")?
 
 No. Electrum-Dime currently only supports Dimecoin.
 
-This project has never intended to support additional altcoins, only Dimecoin. However Electrum
+This project has never intended to support additional altcoins, only Dimecoin. However Electrum-Dime
 is free (as in freedom) software with a permissive license, and there are many
 forks of the software that support specific altcoins. These are separate projects,
 with their own maintainers, independent of Electrum-Dime. We do not review their code

@@ -3,4 +3,4 @@ For a list of historical security issues in Electrum-Dime, see
 
 
 Originally, this file contained the details of
-:doc:`JSONRPC vulnerability in Electrum 2.6 to 3.0.4 <security_issues/sec_201801>`.
+:doc:`JSONRPC vulnerability in Electrum 2.6 to 3.0.4 <security_issues/sec_201801>`, which are prior to Dimecoin's implementation of Electrum.

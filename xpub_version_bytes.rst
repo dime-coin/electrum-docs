@@ -1,7 +1,7 @@
-Version bytes for BIP32 extended public and private keys
+Version Bytes for BIP32 Extended Public and Private Keys
 ========================================================
 
-This document describes the version bytes used in Electrum for master keys.
+This document describes the version bytes used in Electrum-Dime for master keys.
 
 Abstract
 --------
@@ -14,17 +14,17 @@ should derive along this HD subtree.
 
 Motivation
 ----------
-
-Among other changes, the activation of SegWit
-(`BIP141 <https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki>`__)
-introduced new output script templates usable on Bitcoin mainnet. This
-poses a new problem for HD wallets in terms of what type of scripts they
-should derive from master keys. Previously most wallets offered deriving
-either P2PKH or multi-signature embedded in
-`BIP16 <https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki>`__
-P2SH outputs, and it was usually deduced from context which of the two
-should be used. We believe it would be better to have this knowledge
-explicitly.
+..
+   Among other changes, the activation of SegWit
+   (`BIP141 <https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki>`__)
+   introduced new output script templates usable on Bitcoin mainnet. This
+   poses a new problem for HD wallets in terms of what type of scripts they
+   should derive from master keys. Previously most wallets offered deriving
+   either P2PKH or multi-signature embedded in
+   `BIP16 <https://github.com/bitcoin/bips/blob/master/bip-0016.mediawiki>`__
+   P2SH outputs, and it was usually deduced from context which of the two
+   should be used. We believe it would be better to have this knowledge
+   explicitly.
 
 Encoding the script type in
 `BIP32 <https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki>`__

@@ -4,13 +4,13 @@ Cold Storage
 ============
 
 This document shows how to create an offline wallet that
-holds your Bitcoins and a watching-only online wallet that
+holds your dimecoins and a watching-only online wallet that
 is used to view its history and to create transactions that
 have to be signed with the offline wallet before being
 broadcast on the online one.
 
 
-Create an offline wallet
+Create an Offline Wallet
 ------------------------
 
 Create a wallet on an offline machine, as per the usual process (file
@@ -24,7 +24,7 @@ The Master Public Key of your wallet is the string shown in this popup
 window.  Transfer that key to your online machine somehow.
 
 
-Create a watching-only version of your wallet
+Create a Watch-Only Version of your Wallet
 ---------------------------------------------
 
 On your online machine, open up Electrum-Dime and select File ->
@@ -47,7 +47,7 @@ When you're done, you should see a popup informing you that you are opening a wa
 
 Then you should see the transaction history of your cold wallet.
 
-Create an unsigned transaction
+Create an Unsigned Transaction
 ------------------------------
 
 Go to the "send" tab on your online watching-only wallet,
@@ -60,7 +60,7 @@ Press "save" and save the transaction file somewhere on your computer. Close the
 window and transfer the transaction file to your offline
 machine (e.g. with a usb stick).
 
-Get your transaction signed
+Sign your Transaction
 ---------------------------
 
 On your offline wallet, select Tools -> Load transaction -> From file
@@ -77,12 +77,12 @@ appears in its designated field.
 Press save, store the file somewhere on your
 computer, and transfer it back to your online machine.
 
-Broadcast your transaction
+Broadcast your Transaction
 --------------------------
 
 
 On your online machine, select Tools -> Load transaction -> From File
 from the menu. Select the signed transaction file. In the window that
 opens up, press "broadcast". The transaction will be broadcasted over
-the Bitcoin network.
+the Dimecoin network.
 

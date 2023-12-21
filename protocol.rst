@@ -1,18 +1,17 @@
-Electrum protocol specification
+Electrum-Dime Protocol Specification
 ===============================
 
-(NOTE: this document is outdated. For newer versions of the protocol than 0.10, see https://electrumx-spesmilo.readthedocs.io/en/latest/protocol.html )
+(NOTE: this document is outdated. See, [ElectrumX Docs](https://electrumx-spesmilo.readthedocs.io/en/latest/protocol.html) for detailed information regarding ElectrumX.)
 
-Stratum is a universal bitcoin communication protocol used
-mainly by bitcoin client Electrum and miners.
+ElectrumX is a universal Dimecoin communication protocol used
+mainly by the Dimecoin client Electrum-Dime, miners, and stakers.
 
 
 Format
 ------
 
-Stratum protocol is based on `JSON-RPC 2.0`_ (although it doesn't
-include "jsonrpc" information in every message). Each
-message has to end with a line end character (\n).
+ElectrumX protocol is based on `JSON-RPC`_. Two standards `JSON-RPC 1.0` and `JSON-RPC 2.0` are specified; use of version 2.0 is
+encouraged but not required. Each message has to end with a line end character (\n).
 
 .. _JSON-RPC 2.0: http://www.jsonrpc.org/specification
 
@@ -374,10 +373,3 @@ Parameter: How many blocks the transaction may wait before being included.
 .. code-block:: json
 
    { "id": 17, "result": -1 }
-
-
-External links
---------------
-
-- https://docs.google.com/a/palatinus.cz/document/d/17zHy1SUlhgtCMbypO8cHgpWH73V5iUQKk_0rWvMqSNs/edit?hl=en_US" original Slush's specification of Stratum protocol
-- http://mining.bitcoin.cz/stratum-mining specification of Stratum mining extension

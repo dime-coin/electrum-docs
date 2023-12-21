@@ -1,11 +1,11 @@
 
-How to split your coins using Electrum in case of a fork
+How to Split your Coins using Electrum-Dime in Case of a Fork
 ========================================================
 
 Note:
 -----
 
-This document has been updated for Electrum 2.9.
+This document has been updated for Electrum-Dime 1.0.
 
 
 What is a fork?
@@ -14,11 +14,11 @@ What is a fork?
 A blockchain fork (or blockchain split) occurs when a deviating
 network begins to generate and maintain a conflicting chain of blocks
 branching from the original, essentially creating another "version of
-bitcoin" or cryptocurrency, with its very own blockchain, set of
+dimecoin" or cryptocurrency, with its very own blockchain, set of
 rules, and market value.
 
-If there is a fork of the Bitcoin blockchain, two distinct currencies
-will coexist, having different market values.
+If there happens to be a fork of the Diemcoin blockchain, two distinct currencies
+will co-exist, having different market values.
 
 
 What does it mean to 'split your coins'?
@@ -27,7 +27,7 @@ What does it mean to 'split your coins'?
 An address on the original blockchain will now also contain the same
 amount on the new chain.
 
-If you own Bitcoins before the fork, a transaction that spends these
+If you own Dimecoins before the fork, a transaction that spends these
 coins after the fork will, in general, be valid on both chains. This
 means that you might be spending both coins simultaneously. This is
 called 'replay'. To prevent this, you need to move your coins using
@@ -38,12 +38,12 @@ transactions that differ on both chains.
 Fork detection
 --------------
 
-Electrum (version 2.9 and higher) is able to detect consensus failures
+Electrum-Dime (version 1.0 and higher) is able to detect consensus failures
 between servers (blockchain forks), and lets users select their branch
 of the fork.
 
-* Electrum will download and validate block headers sent by servers
-  that may follow different branches of a fork in the Bitcoin
+* Electrum-Dime will download and validate block headers sent by servers
+  that may follow different branches of a fork in the Dimecoin
   blockchain. Instead of a linear sequence, block headers are
   organized in a tree structure. Branching points are located
   efficiently using binary search. The purpose of MCV is to detect and
@@ -53,7 +53,7 @@ of the fork.
 * The desired branch of a blockchain fork can be selected using the
   network dialog. Branches are identified by the hash and height of
   the diverging block. Coin splitting is possible using RBF
-  transaction (a tutorial will be added).
+  transaction (tutorial to be added at a later date).
 
 
 This feature allows you to pick and choose which chain and network you spend on.
