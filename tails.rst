@@ -3,10 +3,6 @@ Using Electrum-Dime on Tails
 
 Software installed on Tails cannot be permanently upgraded since it is a fixed (read-only) image. You can run the most recent version of Electrum-Dime with Tails by using the AppImage binary we distribute (a self-contained executable that should work on any x86_64 Linux including Tails).
 
-Tails version 4 (since October 2019) ships with a working version of Electrum-Dime at the time of its release - these instructions can be used to run the latest version of Electrum-Dime between Tails/Debian releases.
-
-Tails version 3 (prior to October 2019) ships with an outdated version of Electrum-Dime that can no longer be used on the public Electrum-Dime server network. It is recommended instead to upgrade to the latest Tails since it will have many other security improvements as well.
-
 These steps have been tested on Tails versions 3 and 4.
 
 Steps to use AppImage
