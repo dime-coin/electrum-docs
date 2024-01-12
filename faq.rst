@@ -332,9 +332,29 @@ What is the gap limit?
 The gap limit is the maximum number of consecutive unused addresses in
 your deterministic sequence of addresses. Electrum-Dime uses it in order
 to stop looking for addresses. In Electrum-Dime 1.0, it is set to 20 by
-default, so the client will get all addresses until 20 unused
-addresses are found.
+default, so the client will get all addresses until 20 unused addresses are found. 
+To check what the current gap limit is set to on your client you enter this, 
+in the console: 
 
+.. code-block:: python
+
+   wallet.gap_limit
+
+
+Note: Addresses beyond the gap limit will appear red. If you are restoring a seed that 
+exceeds the gap limit the electrum-dime client will not look for those addresses by default. Do not worry,
+your coins are still there. For the client to recognize those addresses, you will have to increase the gap limit manually.
+
+How do I increase the gap limit?
+-------------------------------
+
+The gap limit can be increased by opening the console, and typing the following command:
+
+.. code-block:: python
+
+   wallet.change_gap_limit(X)
+
+Replace X with the desired number of addresses to be displayed.
 
 How can I pre-generate new addresses?
 -------------------------------------
