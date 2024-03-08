@@ -422,7 +422,7 @@ Electrum-Dime:
   first time you launch Electrum-Dime after an upgrade. This is expected
   behavior. Restart Electrum-Dime after the upgrade is
   complete and your addresses will be available.
-
+  
 - Offline copies of Electrum-Dime will not show the
   addresses at all because it cannot synchronize with
   the network. You can force an offline generation of a
